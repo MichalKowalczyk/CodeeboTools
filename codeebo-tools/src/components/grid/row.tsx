@@ -36,7 +36,7 @@ interface Props {
 }
 
 const Row: React.FC<Props> = (props: Props) => {
-  const { children, gap = 64, className = "", align, style, debug } = props;
+  const { children, gap = 32, className = "", align, style, debug } = props;
   return (
     <div className={`row row-gap-${gap} ${align ? "align-" + align : ""} ${debug ? "debug" : ""} ${className}`} style={style}>
       {children}
