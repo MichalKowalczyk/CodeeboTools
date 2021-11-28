@@ -19,7 +19,6 @@ function App() {
           <Col size={[3, 4, 6, 12]}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum temporibus odio quibusdam repudiandae at modi obcaecati eius quia amet tenetur accusantium iste corporis, maiores non exercitationem ratione asperiores rem ab.</Col>
         </Row>
       </Grid>
-      
       <br />
       <br />
       <br />
