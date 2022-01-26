@@ -1,10 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import counterReducer from '../features/counter/counterSlice';
+import langReducer from '../components/lang-switch/langSlice';
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    lang: langReducer,
   },
 });
 

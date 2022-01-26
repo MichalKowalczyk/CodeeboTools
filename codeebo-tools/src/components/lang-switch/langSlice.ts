@@ -23,28 +23,28 @@
   SOFTWARE.
 */
 
-// import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-// import { RootState } from '../../app/store';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from '../../app/store';
 
-// export interface LangState {
-//   lang: 'pl' | 'en';
-// }
+export interface LangState {
+  lang: 'pl' | 'en';
+}
 
-// const initialState: LangState = {
-//   lang: 'pl',
-// };
+const initialState: LangState = {
+  lang: 'pl',
+};
 
-// export const langSlice = createSlice({
-//   name: 'lang',
-//   initialState,
-//   reducers: {
-//     set: (state, action: PayloadAction<'pl' | 'en'>) => {
-//       state.lang = action.payload;
-//     },
-//   },
-// });
+export const langSlice = createSlice({
+  name: 'lang',
+  initialState,
+  reducers: {
+    set: (state, action: PayloadAction<'pl' | 'en'>) => {
+      state.lang = action.payload;
+    },
+  },
+});
 
-// export const { set } = langSlice.actions;
-// export const selectLang = (state: RootState) => state.lang.lang;
+export const { set } = langSlice.actions;
+export const selectLang = (state: RootState) => state.lang.lang;
 
-// export default langSlice.reducer;
+export default langSlice.reducer;

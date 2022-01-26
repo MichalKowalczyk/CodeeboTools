@@ -23,32 +23,32 @@
   SOFTWARE.
 */
 
-// import { useAppDispatch, useAppSelector } from "../../app/store";
-// import { selectLang, set } from "./langSlice";
-// import "./lang-switch.scss";
+import { useAppDispatch, useAppSelector } from "../../app/store";
+import { selectLang, set } from "./langSlice";
+import "./lang-switch.scss";
 // import { Helmet } from "react-helmet-async";
 
-// interface Props {
-//   className?: string;
-// }
+interface Props {
+  className?: string;
+}
 
-// const LangSwitch: React.FC<Props> = (props: Props) => {
-//   const lang = useAppSelector(selectLang);
-//   const dispatch = useAppDispatch();
+const LangSwitch: React.FC<Props> = (props: Props) => {
+  const lang = useAppSelector(selectLang);
+  const dispatch = useAppDispatch();
 
-//   return (
-//     <>
-//       <Helmet htmlAttributes={{ lang: lang }} />
-//       <div className="lang-switch">
-//         <button className={`${lang === "pl" ? "active" : ""}`} onClick={() => dispatch(set("pl"))}>
-//           PL
-//         </button>
-//         <button className={`${lang === "en" ? "active" : ""}`} onClick={() => dispatch(set("en"))}>
-//           EN
-//         </button>
-//       </div>
-//     </>
-//   );
-// };
+  return (
+    <>
+      {/* <Helmet htmlAttributes={{ lang: lang }} /> */}
+       <div className="lang-switch">
+         <button className={`${lang === "pl" ? "active" : ""}`} onClick={() => dispatch(set("pl"))}>
+           PL
+         </button>
+         <button className={`${lang === "en" ? "active" : ""}`} onClick={() => dispatch(set("en"))}>
+           EN
+         </button>
+       </div>
+    </>
+  );
+};
 
-// export default LangSwitch;
+export default LangSwitch;

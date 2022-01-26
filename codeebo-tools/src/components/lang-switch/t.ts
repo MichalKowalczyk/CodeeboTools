@@ -23,13 +23,13 @@
   SOFTWARE.
 */
 
-// import { useAppSelector } from '../../app/store';
-// import { selectLang } from "./langSlice";
-// import "./lang-switch.scss";
+import { useAppSelector } from '../../app/store';
+import { selectLang } from "./langSlice";
+import "./lang-switch.scss";
 
-// const T = (pl: string, en: string): string => {
-//     const lang = useAppSelector(selectLang);
-//     return lang === 'pl' ? pl : en;
-// };
+const T = (pl: string, en: string): string => {
+    const lang = useAppSelector(selectLang);
+    return lang === 'pl' ? pl : en;
+};
 
-// export default T;
+export default T;

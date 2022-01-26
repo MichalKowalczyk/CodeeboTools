@@ -28,8 +28,16 @@
   padding: 0px 64px;
   display: flex;
   flex-direction: column;
-  max-width: calc(1440px + 128px);
   margin: auto;
+  &.container-regular {
+    max-width: calc(1440px + 128px);
+  }
+  &.container-large {
+    max-width: calc(1700px + 128px);
+  }
+  &.container-fluid {
+    max-width: 100%;
+  }
 
   @media all and (max-width: 1200px) {
     padding: 0px 32px;

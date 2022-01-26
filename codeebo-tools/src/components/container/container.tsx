@@ -30,15 +30,12 @@ interface Props {
   children: React.ReactNode;
   isRaw?: boolean;
   className?: string;
+  size?: "regular" | "large" | "fluid";
 }
 
 const Container: React.FC<Props> = (props: Props) => {
-  const { children } = props;
-  return (
-    <div className={`container${props.isRaw ? " isRaw" : ""}${props.className ? " " + props.className : ""}`} >
-      {children}
-    </div >
-  )
-}
+  const { children, size = "regular" } = props;
+  return <div className={`container container-${size} ${props.isRaw ? " isRaw" : ""}${props.className ? " " + props.className : ""}`}>{children}</div>;
+};
 
 export default Container;
