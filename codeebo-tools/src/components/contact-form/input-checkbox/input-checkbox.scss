@@ -1,0 +1,52 @@
+$sub-color: #999;
+$main-color: black;
+
+.input-checkbox {
+  display: flex;
+  // align-items: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  margin-top: 8px;
+  cursor: pointer;
+
+  a {
+    color: #F29201;
+  }
+
+  .input-checkbox__rect {
+    font: inherit;
+    margin-top: 3px;
+    background: none;
+    color: $main-color;
+    display: block;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    min-height: 24px;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 16px;
+
+    &.isActive {
+      background: #F29201;
+      box-shadow: inset 0px 0px 0px 5px white;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus~.form-input-label-off {
+      display: none;
+    }
+  }
+
+  .input-checkbox__label {
+    // transit
+  }
+}

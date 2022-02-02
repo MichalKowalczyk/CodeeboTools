@@ -1,0 +1,76 @@
+.customButton,
+.customButton[type="submit"],
+.customButton[type="reset"] {
+  color: inherit;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  border: 1px solid #EE7911;
+  background: transparent;
+  padding: 9.5px 45px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  user-select: none;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+
+  &.fill {
+    color: white;
+    background: #EE7911;
+  }
+
+  &:hover {
+    box-shadow: inset 0px 0px 1000px rgba(242, 142, 5, 0.05);
+  }
+
+  &:active {
+    box-shadow: inset 0px 0px 1000px rgba(242, 142, 5, 0.15);
+  }
+
+  &.success {
+    border: 1px solid rgb(120, 230, 60);
+    background: white;
+    color: black;
+
+    &:hover {
+      box-shadow: inset 0px 0px 1000px rgba(120, 230, 60, 0.05);
+    }
+
+    &:active {
+      box-shadow: inset 0px 0px 1000px rgba(120, 230, 60, 0.15);
+    }
+  }
+
+  &.fail {
+    border: 1px solid rgb(230, 66, 60);
+    background: white;
+    color: black;
+
+    &:hover {
+      box-shadow: inset 0px 0px 1000px rgba(230, 60, 60, 0.05);
+    }
+
+    &:active {
+      box-shadow: inset 0px 0px 1000px rgba(230, 60, 60, 0.15);
+    }
+  }
+
+  img {
+    position: absolute;
+    right: 4%;
+  }
+}
+
+.customButton:disabled,
+.customButton[disabled] {
+  color: #aaa;
+  cursor: wait;
+  background-color: rgba(0, 0, 0, 0.1);
+}

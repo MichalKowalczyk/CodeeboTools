@@ -1,0 +1,117 @@
+$sub-color: #999;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -20px;
+  font-size: 1.2rem;
+  color: $main-color;
+  left: 10px;
+}
+
+.input-text.standardForm {
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  .form-input {
+    font: inherit;
+    background: none;
+    color: $main-color;
+    font-size: 1.6rem;
+    letter-spacing: 0.015em;
+    font-weight: 300;
+    padding: 12px 11px;
+    display: block;
+    width: 100%;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 12px 0 0 0;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #F29201;
+      box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &:read-only {
+      &:focus {
+        box-shadow: initial;
+      }
+
+      transition-delay: 0.2s;
+      transition-duration: 0.1s;
+
+      &:active {
+        transition-delay: 0s;
+        box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &:focus~.form-input-label-off {
+      display: none;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    font: inherit;
+    min-height: 130px;
+    font-size: 1.4rem;
+
+
+    &:focus~.bar:before {
+      width: 100%;
+    }
+
+
+  }
+
+  input {
+    font: inherit;
+    font-size: 1.4rem;
+  }
+
+  input[type='password'] {
+    letter-spacing: 0.3em;
+    font-weight: 400;
+  }
+
+
+  .form-input-label {
+    color: $sub-color;
+    font-size: 1.4rem;
+    font-weight: 300;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 13px;
+    transition: 300ms ease all;
+
+    &.shrink {
+      color: $main-color;
+      @include shrinkLabel();
+    }
+  }
+}
+
+.group.textarea {
+  margin-top: 30px;
+
+  .form-input-label {
+    top: 95px;
+    color: white;
+
+    &.shrink {
+      color: $main-color;
+      top: -14px;
+    }
+  }
+}
+
+.copycursor {
+  .input-text {
+    textarea {
+      cursor: pointer;
+    }
+  }
+}
